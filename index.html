@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="AKGS – Editorial Creative Portfolio & Responsive Navigation Experience for Aravind Kumar GS, Full Stack Developer.">
+  <meta name="author" content="Aravind Kumar GS">
+  <meta name="theme-color" content="#f8f7f4">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AKGS – Creative Editorial Navigation Experience">
+  <meta property="og:description" content="An award-winning editorial developer portfolio navigation crafted with pure HTML5, CSS3, and Vanilla JavaScript.">
+  <meta property="og:type" content="website">
+
+  <title>AKGS — Aravind Kumar GS | Full Stack Developer</title>
+
+  <!-- Google Fonts: Syne (Oversized Display), Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Announcement / Live Location & Clock Ticker -->
+  <div class="top-meta-ticker" aria-hidden="true">
+    <div class="ticker-content">
+      <span>AKGS &bull; ARAVIND KUMAR GS</span>
+      <span>&bull;</span>
+      <span>FULL STACK DEVELOPER</span>
+      <span>&bull;</span>
+      <span>MEENAKSHI COLLEGE OF ENGINEERING (CLASS OF 2027)</span>
+      <span>&bull;</span>
+      <span>CHENNAI, INDIA (13.0827&deg; N, 80.2707&deg; E)</span>
+      <span>&bull;</span>
+      <span class="ticker-live-status">LIVE IST: <span id="liveClock">00:00:00</span></span>
+      <span>&bull;</span>
+      <span>AVAILABLE FOR OPPORTUNITIES</span>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       EDITORIAL STICKY NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="editorial-header" id="header" role="banner">
+    <!-- Fine Scroll Progress Hairline -->
+    <div class="header-progress-track" aria-hidden="true">
+      <div class="header-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <div class="header-inner">
+
+      <!-- Left: Bold Editorial Monogram & Identification -->
+      <a href="#home" class="editorial-brand" id="brandLogo" aria-label="AKGS - Aravind Kumar GS Home">
+        <div class="brand-monogram">
+          <span class="brand-letters">AKGS</span>
+          <span class="brand-symbol" aria-hidden="true">✦</span>
+        </div>
+        <div class="brand-meta">
+          <span class="brand-full-name">Aravind Kumar GS</span>
+          <span class="brand-college-tag">B.E. CSE '27 &bull; Meenakshi College of Engg.</span>
+        </div>
+      </a>
+
+      <!-- Center: Asymmetric Desktop Navigation Links -->
+      <nav class="editorial-nav" id="desktopNav" aria-label="Main Navigation">
+        <ul class="nav-menu" role="menubar">
+          <li class="nav-item" role="none">
+            <a href="#home" class="nav-anchor active" role="menuitem" data-section="home">
+              <span class="nav-anchor-num">01</span>
+              <span class="nav-anchor-label">Home</span>
+            </a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#about" class="nav-anchor" role="menuitem" data-section="about">
+              <span class="nav-anchor-num">02</span>
+              <span class="nav-anchor-label">About</span>
+            </a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#skills" class="nav-anchor" role="menuitem" data-section="skills">
+              <span class="nav-anchor-num">03</span>
+              <span class="nav-anchor-label">Skills</span>
+            </a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#projects" class="nav-anchor" role="menuitem" data-section="projects">
+              <span class="nav-anchor-num">04</span>
+              <span class="nav-anchor-label">Projects</span>
+            </a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#experience" class="nav-anchor" role="menuitem" data-section="experience">
+              <span class="nav-anchor-num">05</span>
+              <span class="nav-anchor-label">Experience</span>
+            </a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#education" class="nav-anchor" role="menuitem" data-section="education">
+              <span class="nav-anchor-num">06</span>
+              <span class="nav-anchor-label">Education</span>
+            </a>
+          </li>
+          <li class="nav-item" role="none">
+            <a href="#contact" class="nav-anchor" role="menuitem" data-section="contact">
+              <span class="nav-anchor-num">07</span>
+              <span class="nav-anchor-label">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right: Live Clock & Unique "Let's Talk" CTA Button -->
+      <div class="header-actions">
+        <div class="desktop-time-pill" title="Live Chennai IST Time">
+          <span class="time-dot"></span>
+          <span class="time-label">CHENNAI</span>
+          <span class="time-val" id="desktopClock">00:00:00</span>
+        </div>
+
+        <!-- Unique "Let's Talk" CTA -->
+        <a href="#contact" class="cta-talk-btn" id="headerCta" aria-label="Get in touch with Aravind Kumar GS">
+          <span class="cta-talk-text">Let's Talk</span>
+          <span class="cta-talk-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </span>
+        </a>
+
+        <!-- Mobile Large Menu Trigger Button -->
+        <button class="editorial-menu-btn" id="mobileMenuBtn" type="button" aria-expanded="false" aria-controls="mobileOverlay" aria-label="Open mobile navigation menu">
+          <span class="menu-btn-label">MENU</span>
+          <span class="menu-btn-icon" aria-hidden="true">
+            <span class="bar-line line-1"></span>
+            <span class="bar-line line-2"></span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       FULL-SCREEN MAGAZINE NAVIGATION OVERLAY (MOBILE & TABLET)
+       ========================================================================= -->
+  <div class="editorial-overlay" id="mobileOverlay" role="dialog" aria-modal="true" aria-label="Site Navigation Menu" aria-hidden="true">
+    <div class="overlay-inner">
+
+      <!-- Overlay Top Bar with Close Button -->
+      <div class="overlay-topbar">
+        <a href="#home" class="overlay-brand" id="overlayBrand">
+          <span class="overlay-brand-logo">AKGS✦</span>
+          <span class="overlay-brand-role">Aravind Kumar GS &bull; Full Stack</span>
+        </a>
+        <button class="overlay-close-btn" id="overlayCloseBtn" type="button" aria-label="Close navigation menu">
+          <span class="close-btn-text">CLOSE</span>
+          <span class="close-btn-cross" aria-hidden="true">✕</span>
+        </button>
+      </div>
+
+      <!-- Oversized Editorial Navigation List -->
+      <nav class="overlay-nav" aria-label="Full-Screen Navigation">
+        <ul class="overlay-nav-list">
+          <li class="overlay-item" style="--step: 0;">
+            <a href="#home" class="overlay-link active" data-section="home">
+              <span class="overlay-link-num">01/</span>
+              <span class="overlay-link-text">Home</span>
+              <span class="overlay-link-arrow">→</span>
+            </a>
+          </li>
+          <li class="overlay-item" style="--step: 1;">
+            <a href="#about" class="overlay-link" data-section="about">
+              <span class="overlay-link-num">02/</span>
+              <span class="overlay-link-text">About</span>
+              <span class="overlay-link-arrow">→</span>
+            </a>
+          </li>
+          <li class="overlay-item" style="--step: 2;">
+            <a href="#skills" class="overlay-link" data-section="skills">
+              <span class="overlay-link-num">03/</span>
+              <span class="overlay-link-text">Skills</span>
+              <span class="overlay-link-arrow">→</span>
+            </a>
+          </li>
+          <li class="overlay-item" style="--step: 3;">
+            <a href="#projects" class="overlay-link" data-section="projects">
+              <span class="overlay-link-num">04/</span>
+              <span class="overlay-link-text">Projects</span>
+              <span class="overlay-link-arrow">→</span>
+            </a>
+          </li>
+          <li class="overlay-item" style="--step: 4;">
+            <a href="#experience" class="overlay-link" data-section="experience">
+              <span class="overlay-link-num">05/</span>
+              <span class="overlay-link-text">Experience</span>
+              <span class="overlay-link-arrow">→</span>
+            </a>
+          </li>
+          <li class="overlay-item" style="--step: 5;">
+            <a href="#education" class="overlay-link" data-section="education">
+              <span class="overlay-link-num">06/</span>
+              <span class="overlay-link-text">Education</span>
+              <span class="overlay-link-arrow">→</span>
+            </a>
+          </li>
+          <li class="overlay-item" style="--step: 6;">
+            <a href="#contact" class="overlay-link" data-section="contact">
+              <span class="overlay-link-num">07/</span>
+              <span class="overlay-link-text">Contact</span>
+              <span class="overlay-link-arrow">→</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Overlay Footer: Personal Brand Signature & Social Links -->
+      <div class="overlay-footer">
+        <div class="overlay-footer-col">
+          <span class="overlay-col-title">LOCATION &amp; ACADEMICS</span>
+          <p>Chennai, India &bull; Meenakshi College of Engg. (Graduating 2027)</p>
+          <p>B.E. Computer Science &amp; Engineering</p>
+        </div>
+        <div class="overlay-footer-col">
+          <span class="overlay-col-title">ONLINE PROFILES</span>
+          <div class="overlay-social-links">
+            <a href="https://github.com/ARAVINDKUMARGS" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://linkedin.com/in/aravind-kumar-gs-30b3852a3" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://aravindkumar-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio ↗</a>
+          </div>
+        </div>
+        <div class="overlay-footer-col overlay-footer-cta">
+          <a href="#contact" class="cta-talk-btn cta-talk-btn--overlay" id="overlayCta">
+            <span>Let's Talk &bull; Get in Touch</span>
+            <span class="cta-talk-icon">↗</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN CONTENT: EDITORIAL PORTFOLIO SECTIONS
+       ========================================================================= -->
+  <main id="main-content" class="editorial-main">
+
+    <!-- 1. HOME SECTION -->
+    <section id="home" class="section section--hero">
+      <div class="container">
+
+        <div class="hero-header-meta">
+          <span class="meta-tag">PORTFOLIO ISSUE &bull; VOL. 2027</span>
+          <span class="meta-tag">LOCATION: CHENNAI, TAMIL NADU</span>
+          <span class="meta-tag accent-tag">AVAILABLE FOR CONTRACT &amp; INTERNSHIPS</span>
+        </div>
+
+        <div class="hero-display-group">
+          <h1 class="hero-huge-title">
+            <span class="title-row">ARAVIND</span>
+            <span class="title-row indent-row">KUMAR GS<span class="title-accent-asterisk">✦</span></span>
+          </h1>
+
+          <div class="hero-editorial-subgrid">
+            <div class="subgrid-col-left">
+              <span class="editorial-tag-label">DISCIPLINE</span>
+              <h2 class="subgrid-heading">Full Stack Developer &amp; Systems Builder</h2>
+              <p class="subgrid-desc">
+                Building refined digital products with thoughtful engineering, architectural rigor, and uncompromising performance. Undergraduate in Computer Science &amp; Engineering at <strong>Meenakshi College of Engineering</strong>, Chennai.
+              </p>
+            </div>
+            <div class="subgrid-col-right">
+              <div class="stat-editorial-box">
+                <span class="stat-big-num">2027</span>
+                <span class="stat-desc">Graduation Year &bull; Meenakshi College of Engg.</span>
+              </div>
+              <div class="stat-editorial-box">
+                <span class="stat-big-num">100%</span>
+                <span class="stat-desc">Zero-Framework Native Web Precision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom-actions">
+          <a href="#projects" class="btn-editorial-primary">
+            <span>Explore Highlighted Work</span>
+            <span class="btn-arrow">↓</span>
+          </a>
+          <a href="#contact" class="btn-editorial-secondary">
+            <span>Initiate Collaboration</span>
+            <span class="btn-arrow">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="editorial-section-header">
+          <span class="section-num-tag">02 / BIOGRAPHY</span>
+          <h2 class="section-title">About Aravind Kumar GS</h2>
+        </div>
+
+        <div class="about-editorial-layout">
+          <div class="about-hero-statement">
+            <p class="statement-large">
+              "Great software balances speed, simplicity, and visual distinction. I engineer web systems where form and function exist in absolute harmony."
+            </p>
+            <div class="brand-origin-card">
+              <div class="brand-origin-row">
+                <strong>Name</strong>
+                <span>Aravind Kumar GS</span>
+              </div>
+              <div class="brand-origin-row">
+                <strong>Brand</strong>
+                <span>AKGS</span>
+              </div>
+              <div class="brand-origin-row">
+                <strong>Institution</strong>
+                <span>Meenakshi College of Engineering, Chennai</span>
+              </div>
+              <div class="brand-origin-row">
+                <strong>Curriculum</strong>
+                <span>B.E. Computer Science &amp; Engineering (2023 &ndash; 2027)</span>
+              </div>
+              <div class="brand-origin-row">
+                <strong>Base</strong>
+                <span>Chennai, Tamil Nadu, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-principles-list">
+            <article class="principle-item">
+              <span class="principle-num">01</span>
+              <div>
+                <h3>Vanilla-First Execution</h3>
+                <p>Prioritizing core web standards (HTML5 semantic markup, modern CSS3 layout engines, and ES6+ JavaScript) ensuring zero bundle weight and instantaneous loading speeds.</p>
+              </div>
+            </article>
+            <article class="principle-item">
+              <span class="principle-num">02</span>
+              <div>
+                <h3>Typographic Discipline</h3>
+                <p>Treating typography as the foundation of interface design. Strict font scales, proportional whitespace, and intentional contrast create an editorial reading experience.</p>
+              </div>
+            </article>
+            <article class="principle-item">
+              <span class="principle-num">03</span>
+              <div>
+                <h3>End-to-End Reliability</h3>
+                <p>From distributed API design and relational schemas to micro-interactions and screen-reader accessibility, every layer of the product is thoughtfully engineered.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="editorial-section-header">
+          <span class="section-num-tag">03 / CAPABILITIES</span>
+          <h2 class="section-title">Technical Proficiency</h2>
+        </div>
+
+        <div class="skills-editorial-grid">
+          <div class="skill-column">
+            <div class="skill-column-header">
+              <span class="col-num">SECTION A</span>
+              <h3>Frontend Systems</h3>
+            </div>
+            <ul class="editorial-checklist">
+              <li>HTML5 Semantic Web Standards</li>
+              <li>Modern CSS3 (Flexbox &amp; CSS Grid)</li>
+              <li>Vanilla JavaScript (ES6+ Architecture)</li>
+              <li>Responsive Fluid &amp; Asymmetric Layouts</li>
+              <li>Micro-Animations &amp; Keyframe Dynamics</li>
+              <li>WCAG 2.1 AA Web Accessibility (a11y)</li>
+              <li>IntersectionObserver &amp; DOM APIs</li>
+            </ul>
+          </div>
+
+          <div class="skill-column">
+            <div class="skill-column-header">
+              <span class="col-num">SECTION B</span>
+              <h3>Backend &amp; Database</h3>
+            </div>
+            <ul class="editorial-checklist">
+              <li>Node.js Runtime Environment</li>
+              <li>Express.js RESTful Services</li>
+              <li>PostgreSQL &amp; Relational SQL</li>
+              <li>MongoDB &amp; Document Stores</li>
+              <li>API Architecture &amp; Authentication</li>
+              <li>Data Structures &amp; Algorithm Optimization</li>
+              <li>Server State Management</li>
+            </ul>
+          </div>
+
+          <div class="skill-column">
+            <div class="skill-column-header">
+              <span class="col-num">SECTION C</span>
+              <h3>Engineering Toolchain</h3>
+            </div>
+            <ul class="editorial-checklist">
+              <li>Git Version Control &amp; GitHub</li>
+              <li>Vercel Cloud Deployment</li>
+              <li>Visual Studio Code</li>
+              <li>Chrome DevTools Profiling</li>
+              <li>Cross-Browser Compatibility</li>
+              <li>Markdown &amp; Technical Writing</li>
+              <li>Linux / Terminal Utilities</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="editorial-section-header">
+          <span class="section-num-tag">04 / SELECTED WORKS</span>
+          <h2 class="section-title">Projects Showcase</h2>
+        </div>
+
+        <div class="projects-editorial-list">
+          <article class="project-entry">
+            <div class="project-entry-left">
+              <span class="project-index">PROJECT 01</span>
+              <h3 class="project-heading">Personal Developer Portfolio</h3>
+              <p class="project-summary">
+                A high-performance modern developer portfolio showcasing engineering projects, interactive tools, and developer credentials with responsive visual rhythm.
+              </p>
+              <div class="project-tags-row">
+                <span>Next.js</span>
+                <span>Tailwind CSS</span>
+                <span>Vercel</span>
+              </div>
+            </div>
+            <div class="project-entry-right">
+              <a href="https://aravindkumar-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" class="editorial-cta-link">
+                <span>View Live Site</span>
+                <span class="arrow-glyph">↗</span>
+              </a>
+              <a href="https://github.com/ARAVINDKUMARGS" target="_blank" rel="noopener noreferrer" class="editorial-cta-link secondary-link">
+                <span>Source Code</span>
+                <span class="arrow-glyph">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-entry">
+            <div class="project-entry-left">
+              <span class="project-index">PROJECT 02</span>
+              <h3 class="project-heading">AKGS Creative Navigation Experience</h3>
+              <p class="project-summary">
+                An editorial-inspired, zero-framework navigation system featuring asymmetric desktop headers, full-screen magazine overlay, and strict accessibility.
+              </p>
+              <div class="project-tags-row">
+                <span>HTML5</span>
+                <span>CSS3 Custom Properties</span>
+                <span>Vanilla JS</span>
+              </div>
+            </div>
+            <div class="project-entry-right">
+              <a href="#home" class="editorial-cta-link">
+                <span>Current Project</span>
+                <span class="arrow-glyph">✦</span>
+              </a>
+              <a href="https://github.com/ARAVINDKUMARGS" target="_blank" rel="noopener noreferrer" class="editorial-cta-link secondary-link">
+                <span>GitHub Repository</span>
+                <span class="arrow-glyph">→</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-entry">
+            <div class="project-entry-left">
+              <span class="project-index">PROJECT 03</span>
+              <h3 class="project-heading">Algorithmic &amp; Computer Science Experiments</h3>
+              <p class="project-summary">
+                Interactive computational experiments, data structure visualizers, and web utilities developed during undergraduate coursework at Meenakshi College of Engineering.
+              </p>
+              <div class="project-tags-row">
+                <span>Algorithms</span>
+                <span>Data Structures</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-entry-right">
+              <a href="https://github.com/ARAVINDKUMARGS" target="_blank" rel="noopener noreferrer" class="editorial-cta-link">
+                <span>Explore Repos</span>
+                <span class="arrow-glyph">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="editorial-section-header">
+          <span class="section-num-tag">05 / TIMELINE</span>
+          <h2 class="section-title">Experience &amp; Roadmap</h2>
+        </div>
+
+        <div class="editorial-roadmap">
+          <div class="roadmap-item">
+            <div class="roadmap-date-col">
+              <span class="date-stamp">2023 &ndash; PRESENT</span>
+              <span class="date-status">CURRENT FOCUS</span>
+            </div>
+            <div class="roadmap-details-col">
+              <h3 class="roadmap-role">Full Stack Developer &amp; Open Source Builder</h3>
+              <span class="roadmap-brand">AKGS &bull; Chennai, Tamil Nadu, India</span>
+              <p class="roadmap-text">
+                Developing full stack web applications, designing interactive components, and experimenting with progressive typography and responsive layout systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-date-col">
+              <span class="date-stamp">2023 &ndash; 2027</span>
+              <span class="date-status">UNDERGRADUATE</span>
+            </div>
+            <div class="roadmap-details-col">
+              <h3 class="roadmap-role">B.E. Computer Science &amp; Engineering</h3>
+              <span class="roadmap-brand">Meenakshi College of Engineering</span>
+              <p class="roadmap-text">
+                Immersed in core computer science curriculums: Data Structures, Algorithms, Relational Databases, Operating Systems, Computer Networks, and Object-Oriented Software Design.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. EDUCATION SECTION -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="editorial-section-header">
+          <span class="section-num-tag">06 / ACADEMICS</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="education-editorial-card">
+          <div class="edu-editorial-top">
+            <div class="edu-flag">DEGREE PROGRAM</div>
+            <div class="edu-year">CLASS OF 2027</div>
+          </div>
+          <h3 class="edu-degree-name">Bachelor of Engineering (B.E.) in Computer Science &amp; Engineering</h3>
+          <h4 class="edu-college-name">Meenakshi College of Engineering</h4>
+          <p class="edu-geo-location">📍 Chennai, Tamil Nadu, India</p>
+
+          <div class="edu-attributes-strip">
+            <span>&bull; Four-Year Undergraduate Degree</span>
+            <span>&bull; Affiliated to Anna University</span>
+            <span>&bull; Department of Computer Science &amp; Engineering</span>
+          </div>
+
+          <p class="edu-narrative">
+            Comprehensive curriculum spanning algorithm design, data management, network protocols, compiler theory, and modern software engineering methodologies. Active in collegiate coding competitions and departmental research seminars.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="section section--contact">
+      <div class="container">
+        <div class="editorial-section-header">
+          <span class="section-num-tag">07 / TRANSMISSION</span>
+          <h2 class="section-title">Let's Talk</h2>
+        </div>
+
+        <div class="contact-editorial-layout">
+          <div class="contact-statement-side">
+            <h3 class="statement-title">Ready to start a conversation?</h3>
+            <p class="statement-body">
+              I am open to engineering internships, software development roles, and freelance consulting. Feel free to reach out via message or connect directly on professional platforms.
+            </p>
+
+            <div class="contact-details-box">
+              <div class="contact-line">
+                <span class="line-k">DIRECT CHANNELS:</span>
+                <div class="channel-links">
+                  <a href="https://linkedin.com/in/aravind-kumar-gs-30b3852a3" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                  <a href="https://github.com/ARAVINDKUMARGS" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                  <a href="https://aravindkumar-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Portfolio ↗</a>
+                </div>
+              </div>
+              <div class="contact-line">
+                <span class="line-k">LOCATION:</span>
+                <span class="line-v">Chennai, Tamil Nadu, India</span>
+              </div>
+              <div class="contact-line">
+                <span class="line-k">ACADEMICS:</span>
+                <span class="line-v">Meenakshi College of Engineering (Graduation 2027)</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-editorial-form" id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for reaching out! Aravind Kumar GS will respond promptly.');">
+            <h4 class="form-legend">SEND AN INQUIRY</h4>
+            <div class="form-row">
+              <label for="nameInput">YOUR NAME</label>
+              <input type="text" id="nameInput" name="name" class="editorial-input" placeholder="e.g. Maya Chen" required>
+            </div>
+            <div class="form-row">
+              <label for="emailInput">EMAIL ADDRESS</label>
+              <input type="email" id="emailInput" name="email" class="editorial-input" placeholder="e.g. maya@example.com" required>
+            </div>
+            <div class="form-row">
+              <label for="messageInput">MESSAGE DETAILS</label>
+              <textarea id="messageInput" name="message" rows="4" class="editorial-input" placeholder="Tell me about your project, team, or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-editorial-submit">
+              <span>Send Message</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       EDITORIAL FOOTER
+       ========================================================================= -->
+  <footer class="editorial-footer">
+    <div class="container footer-grid">
+      <div class="footer-col-brand">
+        <span class="footer-big-brand">AKGS✦</span>
+        <p>Aravind Kumar GS &bull; Full Stack Developer</p>
+        <p>Meenakshi College of Engineering &bull; Class of 2027</p>
+      </div>
+      <div class="footer-col-nav">
+        <span class="footer-col-heading">INDEX</span>
+        <ul class="footer-links-list">
+          <li><a href="#home">01 / Home</a></li>
+          <li><a href="#about">02 / About</a></li>
+          <li><a href="#skills">03 / Skills</a></li>
+          <li><a href="#projects">04 / Projects</a></li>
+          <li><a href="#experience">05 / Experience</a></li>
+          <li><a href="#education">06 / Education</a></li>
+          <li><a href="#contact">07 / Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col-back">
+        <a href="#home" class="back-to-top-editorial" aria-label="Return to top of page">
+          <span>TOP</span>
+          <span class="top-arrow">↑</span>
+        </a>
+        <p class="copyright-line">&copy; 2026 AKGS. Chennai, India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
